@@ -1,0 +1,12 @@
+<resources>
+    <color name="redPrimary">#DB2B17</color>
+    <color name="orangePrimary">#E88809</color>
+    <color name="yellowPrimary">#F5BF09</color>
+    <color name="greenPrimary">#3FAD1C</color>
+    <color name="blueAccentPrimary" type="material">#00A8AB</color>
+    <color name="bluePrimary" type="material">#0095C2</color>
+    <color name="purplePrimary" type="material">#955ACC</color>
+    <color name="pinkPrimary" type="material">#D02F82</color>
+    <color name="robinEggBluePrimary">#0095C2</color>
+    <color name="blueBerryPrimary" type="material">#537CED</color>
+</resources>
