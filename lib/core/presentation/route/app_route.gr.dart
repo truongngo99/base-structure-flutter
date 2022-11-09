@@ -29,6 +29,17 @@ class _$AppRouter extends RootStackRouter {
         child: const DetailScreen(),
       );
     },
+    TransactionDialogRoute.name: (routeData) {
+      final args = routeData.argsAs<TransactionDialogRouteArgs>();
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: TransactionDialogScreen(
+          key: args.key,
+          transaction: args.transaction,
+          onClickDone: args.onClickDone,
+        ),
+      );
+    },
   };
 
   @override
@@ -40,6 +51,10 @@ class _$AppRouter extends RootStackRouter {
         RouteConfig(
           DetailRoute.name,
           path: '/detail',
+        ),
+        RouteConfig(
+          TransactionDialogRoute.name,
+          path: '/transaction-dialog-screen',
         ),
       ];
 }
@@ -66,4 +81,52 @@ class DetailRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'DetailRoute';
+}
+
+/// generated route for
+/// [TransactionDialogScreen]
+class TransactionDialogRoute extends PageRouteInfo<TransactionDialogRouteArgs> {
+  TransactionDialogRoute({
+    Key? key,
+    Transaction? transaction,
+    required dynamic Function(
+      String,
+      double,
+      bool,
+    )
+        onClickDone,
+  }) : super(
+          TransactionDialogRoute.name,
+          path: '/transaction-dialog-screen',
+          args: TransactionDialogRouteArgs(
+            key: key,
+            transaction: transaction,
+            onClickDone: onClickDone,
+          ),
+        );
+
+  static const String name = 'TransactionDialogRoute';
+}
+
+class TransactionDialogRouteArgs {
+  const TransactionDialogRouteArgs({
+    this.key,
+    this.transaction,
+    required this.onClickDone,
+  });
+
+  final Key? key;
+
+  final Transaction? transaction;
+
+  final dynamic Function(
+    String,
+    double,
+    bool,
+  ) onClickDone;
+
+  @override
+  String toString() {
+    return 'TransactionDialogRouteArgs{key: $key, transaction: $transaction, onClickDone: $onClickDone}';
+  }
 }
