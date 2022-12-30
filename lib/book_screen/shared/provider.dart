@@ -1,5 +1,6 @@
 import 'package:base_structure/book_screen/application/book_notifier.dart';
 import 'package:base_structure/book_screen/application/detail_book_notifier.dart';
+import 'package:base_structure/core/infrastructure/grpc_interceptor.dart';
 import 'package:base_structure/core/infrastructure/service/book_service.dart';
 import 'package:base_structure/gen/generate_proto/lib/proto/book.pbgrpc.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -14,6 +15,7 @@ final serviceProvider = Provider((ref) {
         credentials: ChannelCredentials.insecure(),
       ),
     ),
+    interceptors: [PerformanceInterceptor()],
   );
   return BookService(client);
 });

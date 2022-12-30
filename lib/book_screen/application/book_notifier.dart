@@ -25,8 +25,9 @@ class BookNotifier extends StateNotifier<BookState> {
   void getAllBook() async {
     Either<ApiFailure, Books> failureOrSuccess =
         await _bookService.getAllBook();
-    state = failureOrSuccess.fold(
-        (l) => BookState.failure(l), (r) => BookState.success(r.books));
+    state = failureOrSuccess.fold((l) {
+      return BookState.failure(l);
+    }, (r) => BookState.success(r.books));
   }
 
   void deleteBook(BookId id) async {

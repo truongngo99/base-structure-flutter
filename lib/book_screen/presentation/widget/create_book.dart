@@ -18,15 +18,21 @@ class _CreateBookState extends ConsumerState<CreateBook> {
   TextEditingController nameCtl = TextEditingController();
   TextEditingController imageCtl = TextEditingController();
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    // TODO: implement initState
+    super.initState();
     idCtl.text = widget.book?.id.toString() ?? "";
     nameCtl.text = widget.book?.title ?? "";
     imageCtl.text = widget.book?.imageUrl.toString() ?? "";
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Dialog(
       child: Container(
         padding: const EdgeInsets.all(8),
-        height: MediaQuery.of(context).size.height * 0.45,
+        height: MediaQuery.of(context).size.height * 0.55,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -41,6 +47,7 @@ class _CreateBookState extends ConsumerState<CreateBook> {
             ),
             TextField(
               controller: idCtl,
+              keyboardType: TextInputType.number,
               decoration: const InputDecoration(hintText: "id"),
             ),
             const SizedBox(
@@ -52,7 +59,6 @@ class _CreateBookState extends ConsumerState<CreateBook> {
             ),
             TextField(
               controller: nameCtl,
-              keyboardType: TextInputType.number,
               decoration: const InputDecoration(hintText: "Book Title"),
             ),
             Text(
