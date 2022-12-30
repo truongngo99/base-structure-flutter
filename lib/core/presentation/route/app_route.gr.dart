@@ -29,6 +29,12 @@ class _$AppRouter extends RootStackRouter {
         child: const DetailScreen(),
       );
     },
+    BookRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const BookScreen(),
+      );
+    },
   };
 
   @override
@@ -40,6 +46,10 @@ class _$AppRouter extends RootStackRouter {
         RouteConfig(
           DetailRoute.name,
           path: '/detail',
+        ),
+        RouteConfig(
+          BookRoute.name,
+          path: '/book',
         ),
       ];
 }
@@ -66,4 +76,16 @@ class DetailRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'DetailRoute';
+}
+
+/// generated route for
+/// [BookScreen]
+class BookRoute extends PageRouteInfo<void> {
+  const BookRoute()
+      : super(
+          BookRoute.name,
+          path: '/book',
+        );
+
+  static const String name = 'BookRoute';
 }

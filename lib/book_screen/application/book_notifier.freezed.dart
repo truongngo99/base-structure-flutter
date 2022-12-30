@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'users_notifier.dart';
+part of 'book_notifier.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,100 +15,99 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$UsersState {
+mixin _$BookState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
-    required TResult Function(Users users) success,
-    required TResult Function(ApiFailure failure) error,
+    required TResult Function() initial,
+    required TResult Function(List<Book> books) success,
+    required TResult Function(ApiFailure apiFailure) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(Users users)? success,
-    TResult Function(ApiFailure failure)? error,
+    TResult Function()? initial,
+    TResult Function(List<Book> books)? success,
+    TResult Function(ApiFailure apiFailure)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(Users users)? success,
-    TResult Function(ApiFailure failure)? error,
+    TResult Function()? initial,
+    TResult Function(List<Book> books)? success,
+    TResult Function(ApiFailure apiFailure)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Loading value) loading,
+    required TResult Function(_Initial value) initial,
     required TResult Function(_Success value) success,
-    required TResult Function(_Failure value) error,
+    required TResult Function(_Failure value) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Loading value)? loading,
+    TResult Function(_Initial value)? initial,
     TResult Function(_Success value)? success,
-    TResult Function(_Failure value)? error,
+    TResult Function(_Failure value)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Loading value)? loading,
+    TResult Function(_Initial value)? initial,
     TResult Function(_Success value)? success,
-    TResult Function(_Failure value)? error,
+    TResult Function(_Failure value)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UsersStateCopyWith<$Res> {
-  factory $UsersStateCopyWith(
-          UsersState value, $Res Function(UsersState) then) =
-      _$UsersStateCopyWithImpl<$Res>;
+abstract class $BookStateCopyWith<$Res> {
+  factory $BookStateCopyWith(BookState value, $Res Function(BookState) then) =
+      _$BookStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UsersStateCopyWithImpl<$Res> implements $UsersStateCopyWith<$Res> {
-  _$UsersStateCopyWithImpl(this._value, this._then);
+class _$BookStateCopyWithImpl<$Res> implements $BookStateCopyWith<$Res> {
+  _$BookStateCopyWithImpl(this._value, this._then);
 
-  final UsersState _value;
+  final BookState _value;
   // ignore: unused_field
-  final $Res Function(UsersState) _then;
+  final $Res Function(BookState) _then;
 }
 
 /// @nodoc
-abstract class _$$_LoadingCopyWith<$Res> {
-  factory _$$_LoadingCopyWith(
-          _$_Loading value, $Res Function(_$_Loading) then) =
-      __$$_LoadingCopyWithImpl<$Res>;
+abstract class _$$_InitialCopyWith<$Res> {
+  factory _$$_InitialCopyWith(
+          _$_Initial value, $Res Function(_$_Initial) then) =
+      __$$_InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoadingCopyWithImpl<$Res> extends _$UsersStateCopyWithImpl<$Res>
-    implements _$$_LoadingCopyWith<$Res> {
-  __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
-      : super(_value, (v) => _then(v as _$_Loading));
+class __$$_InitialCopyWithImpl<$Res> extends _$BookStateCopyWithImpl<$Res>
+    implements _$$_InitialCopyWith<$Res> {
+  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+      : super(_value, (v) => _then(v as _$_Initial));
 
   @override
-  _$_Loading get _value => super._value as _$_Loading;
+  _$_Initial get _value => super._value as _$_Initial;
 }
 
 /// @nodoc
 
-class _$_Loading extends _Loading {
-  const _$_Loading() : super._();
+class _$_Initial extends _Initial {
+  const _$_Initial() : super._();
 
   @override
   String toString() {
-    return 'UsersState.loading()';
+    return 'BookState.initial()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Loading);
+        (other.runtimeType == runtimeType && other is _$_Initial);
   }
 
   @override
@@ -117,33 +116,33 @@ class _$_Loading extends _Loading {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
-    required TResult Function(Users users) success,
-    required TResult Function(ApiFailure failure) error,
+    required TResult Function() initial,
+    required TResult Function(List<Book> books) success,
+    required TResult Function(ApiFailure apiFailure) failure,
   }) {
-    return loading();
+    return initial();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(Users users)? success,
-    TResult Function(ApiFailure failure)? error,
+    TResult Function()? initial,
+    TResult Function(List<Book> books)? success,
+    TResult Function(ApiFailure apiFailure)? failure,
   }) {
-    return loading?.call();
+    return initial?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(Users users)? success,
-    TResult Function(ApiFailure failure)? error,
+    TResult Function()? initial,
+    TResult Function(List<Book> books)? success,
+    TResult Function(ApiFailure apiFailure)? failure,
     required TResult orElse(),
   }) {
-    if (loading != null) {
-      return loading();
+    if (initial != null) {
+      return initial();
     }
     return orElse();
   }
@@ -151,41 +150,41 @@ class _$_Loading extends _Loading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Loading value) loading,
+    required TResult Function(_Initial value) initial,
     required TResult Function(_Success value) success,
-    required TResult Function(_Failure value) error,
+    required TResult Function(_Failure value) failure,
   }) {
-    return loading(this);
+    return initial(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Loading value)? loading,
+    TResult Function(_Initial value)? initial,
     TResult Function(_Success value)? success,
-    TResult Function(_Failure value)? error,
+    TResult Function(_Failure value)? failure,
   }) {
-    return loading?.call(this);
+    return initial?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Loading value)? loading,
+    TResult Function(_Initial value)? initial,
     TResult Function(_Success value)? success,
-    TResult Function(_Failure value)? error,
+    TResult Function(_Failure value)? failure,
     required TResult orElse(),
   }) {
-    if (loading != null) {
-      return loading(this);
+    if (initial != null) {
+      return initial(this);
     }
     return orElse();
   }
 }
 
-abstract class _Loading extends UsersState {
-  const factory _Loading() = _$_Loading;
-  const _Loading._() : super._();
+abstract class _Initial extends BookState {
+  const factory _Initial() = _$_Initial;
+  const _Initial._() : super._();
 }
 
 /// @nodoc
@@ -193,13 +192,11 @@ abstract class _$$_SuccessCopyWith<$Res> {
   factory _$$_SuccessCopyWith(
           _$_Success value, $Res Function(_$_Success) then) =
       __$$_SuccessCopyWithImpl<$Res>;
-  $Res call({Users users});
-
-  $UsersCopyWith<$Res> get users;
+  $Res call({List<Book> books});
 }
 
 /// @nodoc
-class __$$_SuccessCopyWithImpl<$Res> extends _$UsersStateCopyWithImpl<$Res>
+class __$$_SuccessCopyWithImpl<$Res> extends _$BookStateCopyWithImpl<$Res>
     implements _$$_SuccessCopyWith<$Res> {
   __$$_SuccessCopyWithImpl(_$_Success _value, $Res Function(_$_Success) _then)
       : super(_value, (v) => _then(v as _$_Success));
@@ -209,35 +206,34 @@ class __$$_SuccessCopyWithImpl<$Res> extends _$UsersStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? users = freezed,
+    Object? books = freezed,
   }) {
     return _then(_$_Success(
-      users == freezed
-          ? _value.users
-          : users // ignore: cast_nullable_to_non_nullable
-              as Users,
+      books == freezed
+          ? _value._books
+          : books // ignore: cast_nullable_to_non_nullable
+              as List<Book>,
     ));
-  }
-
-  @override
-  $UsersCopyWith<$Res> get users {
-    return $UsersCopyWith<$Res>(_value.users, (value) {
-      return _then(_value.copyWith(users: value));
-    });
   }
 }
 
 /// @nodoc
 
 class _$_Success extends _Success {
-  const _$_Success(this.users) : super._();
+  const _$_Success(final List<Book> books)
+      : _books = books,
+        super._();
 
+  final List<Book> _books;
   @override
-  final Users users;
+  List<Book> get books {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_books);
+  }
 
   @override
   String toString() {
-    return 'UsersState.success(users: $users)';
+    return 'BookState.success(books: $books)';
   }
 
   @override
@@ -245,12 +241,12 @@ class _$_Success extends _Success {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Success &&
-            const DeepCollectionEquality().equals(other.users, users));
+            const DeepCollectionEquality().equals(other._books, _books));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(users));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_books));
 
   @JsonKey(ignore: true)
   @override
@@ -260,33 +256,33 @@ class _$_Success extends _Success {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
-    required TResult Function(Users users) success,
-    required TResult Function(ApiFailure failure) error,
+    required TResult Function() initial,
+    required TResult Function(List<Book> books) success,
+    required TResult Function(ApiFailure apiFailure) failure,
   }) {
-    return success(users);
+    return success(books);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(Users users)? success,
-    TResult Function(ApiFailure failure)? error,
+    TResult Function()? initial,
+    TResult Function(List<Book> books)? success,
+    TResult Function(ApiFailure apiFailure)? failure,
   }) {
-    return success?.call(users);
+    return success?.call(books);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(Users users)? success,
-    TResult Function(ApiFailure failure)? error,
+    TResult Function()? initial,
+    TResult Function(List<Book> books)? success,
+    TResult Function(ApiFailure apiFailure)? failure,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(users);
+      return success(books);
     }
     return orElse();
   }
@@ -294,9 +290,9 @@ class _$_Success extends _Success {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Loading value) loading,
+    required TResult Function(_Initial value) initial,
     required TResult Function(_Success value) success,
-    required TResult Function(_Failure value) error,
+    required TResult Function(_Failure value) failure,
   }) {
     return success(this);
   }
@@ -304,9 +300,9 @@ class _$_Success extends _Success {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Loading value)? loading,
+    TResult Function(_Initial value)? initial,
     TResult Function(_Success value)? success,
-    TResult Function(_Failure value)? error,
+    TResult Function(_Failure value)? failure,
   }) {
     return success?.call(this);
   }
@@ -314,9 +310,9 @@ class _$_Success extends _Success {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Loading value)? loading,
+    TResult Function(_Initial value)? initial,
     TResult Function(_Success value)? success,
-    TResult Function(_Failure value)? error,
+    TResult Function(_Failure value)? failure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -326,11 +322,11 @@ class _$_Success extends _Success {
   }
 }
 
-abstract class _Success extends UsersState {
-  const factory _Success(final Users users) = _$_Success;
+abstract class _Success extends BookState {
+  const factory _Success(final List<Book> books) = _$_Success;
   const _Success._() : super._();
 
-  Users get users;
+  List<Book> get books;
   @JsonKey(ignore: true)
   _$$_SuccessCopyWith<_$_Success> get copyWith =>
       throw _privateConstructorUsedError;
@@ -341,13 +337,11 @@ abstract class _$$_FailureCopyWith<$Res> {
   factory _$$_FailureCopyWith(
           _$_Failure value, $Res Function(_$_Failure) then) =
       __$$_FailureCopyWithImpl<$Res>;
-  $Res call({ApiFailure failure});
-
-  $ApiFailureCopyWith<$Res> get failure;
+  $Res call({ApiFailure apiFailure});
 }
 
 /// @nodoc
-class __$$_FailureCopyWithImpl<$Res> extends _$UsersStateCopyWithImpl<$Res>
+class __$$_FailureCopyWithImpl<$Res> extends _$BookStateCopyWithImpl<$Res>
     implements _$$_FailureCopyWith<$Res> {
   __$$_FailureCopyWithImpl(_$_Failure _value, $Res Function(_$_Failure) _then)
       : super(_value, (v) => _then(v as _$_Failure));
@@ -357,35 +351,28 @@ class __$$_FailureCopyWithImpl<$Res> extends _$UsersStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? failure = freezed,
+    Object? apiFailure = freezed,
   }) {
     return _then(_$_Failure(
-      failure == freezed
-          ? _value.failure
-          : failure // ignore: cast_nullable_to_non_nullable
+      apiFailure == freezed
+          ? _value.apiFailure
+          : apiFailure // ignore: cast_nullable_to_non_nullable
               as ApiFailure,
     ));
-  }
-
-  @override
-  $ApiFailureCopyWith<$Res> get failure {
-    return $ApiFailureCopyWith<$Res>(_value.failure, (value) {
-      return _then(_value.copyWith(failure: value));
-    });
   }
 }
 
 /// @nodoc
 
 class _$_Failure extends _Failure {
-  const _$_Failure(this.failure) : super._();
+  const _$_Failure(this.apiFailure) : super._();
 
   @override
-  final ApiFailure failure;
+  final ApiFailure apiFailure;
 
   @override
   String toString() {
-    return 'UsersState.error(failure: $failure)';
+    return 'BookState.failure(apiFailure: $apiFailure)';
   }
 
   @override
@@ -393,12 +380,13 @@ class _$_Failure extends _Failure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Failure &&
-            const DeepCollectionEquality().equals(other.failure, failure));
+            const DeepCollectionEquality()
+                .equals(other.apiFailure, apiFailure));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(failure));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(apiFailure));
 
   @JsonKey(ignore: true)
   @override
@@ -408,33 +396,33 @@ class _$_Failure extends _Failure {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
-    required TResult Function(Users users) success,
-    required TResult Function(ApiFailure failure) error,
+    required TResult Function() initial,
+    required TResult Function(List<Book> books) success,
+    required TResult Function(ApiFailure apiFailure) failure,
   }) {
-    return error(failure);
+    return failure(apiFailure);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(Users users)? success,
-    TResult Function(ApiFailure failure)? error,
+    TResult Function()? initial,
+    TResult Function(List<Book> books)? success,
+    TResult Function(ApiFailure apiFailure)? failure,
   }) {
-    return error?.call(failure);
+    return failure?.call(apiFailure);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function(Users users)? success,
-    TResult Function(ApiFailure failure)? error,
+    TResult Function()? initial,
+    TResult Function(List<Book> books)? success,
+    TResult Function(ApiFailure apiFailure)? failure,
     required TResult orElse(),
   }) {
-    if (error != null) {
-      return error(failure);
+    if (failure != null) {
+      return failure(apiFailure);
     }
     return orElse();
   }
@@ -442,43 +430,43 @@ class _$_Failure extends _Failure {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Loading value) loading,
+    required TResult Function(_Initial value) initial,
     required TResult Function(_Success value) success,
-    required TResult Function(_Failure value) error,
+    required TResult Function(_Failure value) failure,
   }) {
-    return error(this);
+    return failure(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Loading value)? loading,
+    TResult Function(_Initial value)? initial,
     TResult Function(_Success value)? success,
-    TResult Function(_Failure value)? error,
+    TResult Function(_Failure value)? failure,
   }) {
-    return error?.call(this);
+    return failure?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Loading value)? loading,
+    TResult Function(_Initial value)? initial,
     TResult Function(_Success value)? success,
-    TResult Function(_Failure value)? error,
+    TResult Function(_Failure value)? failure,
     required TResult orElse(),
   }) {
-    if (error != null) {
-      return error(this);
+    if (failure != null) {
+      return failure(this);
     }
     return orElse();
   }
 }
 
-abstract class _Failure extends UsersState {
-  const factory _Failure(final ApiFailure failure) = _$_Failure;
+abstract class _Failure extends BookState {
+  const factory _Failure(final ApiFailure apiFailure) = _$_Failure;
   const _Failure._() : super._();
 
-  ApiFailure get failure;
+  ApiFailure get apiFailure;
   @JsonKey(ignore: true)
   _$$_FailureCopyWith<_$_Failure> get copyWith =>
       throw _privateConstructorUsedError;

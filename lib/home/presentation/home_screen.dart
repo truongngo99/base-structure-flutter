@@ -13,9 +13,19 @@ class HomeScreen extends StatelessWidget {
         title: Text(F.title),
       ),
       body: Center(
-        child: InkWell(
-            onTap: () => context.router.push(const DetailRoute()),
-            child: const Text("Go To Detail")),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+                onPressed: () => context.router.push(const DetailRoute()),
+                child: const Text("Go To Detail")),
+            ElevatedButton(
+              onPressed: () => context.router.push(const BookRoute()),
+              child: const Text("Go To Demo gRPC"),
+            ),
+          ],
+        ),
       ),
     );
   }

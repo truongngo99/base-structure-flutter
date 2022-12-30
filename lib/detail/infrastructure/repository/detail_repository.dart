@@ -7,14 +7,14 @@ class DetailRepository {
   final Dio _dio;
   DetailRepository(this._dio);
 
-  Future<Either<Failure, Users>> getListUser() async {
+  Future<Either<ApiFailure, Users>> getListUser() async {
     try {
       Response res = await _dio.get("/api/users", queryParameters: {
         "page": 2,
       });
       return right(Users.fromJson(res.data));
     } on DioError catch (e) {
-      return left(Failure.server("", e.message));
+      return left(ApiFailure.server(e.message));
     }
   }
 }

@@ -11,7 +11,7 @@ class UsersState with _$UsersState {
   const UsersState._();
   const factory UsersState.loading() = _Loading;
   const factory UsersState.success(Users users) = _Success;
-  const factory UsersState.error(Failure failure) = _Failure;
+  const factory UsersState.error(ApiFailure failure) = _Failure;
 }
 
 class UsersNotifier extends StateNotifier<UsersState> {
