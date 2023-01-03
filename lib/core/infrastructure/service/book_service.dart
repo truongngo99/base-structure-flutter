@@ -11,7 +11,7 @@ class BookService {
       final books = await client.getAllBooks(Empty());
       return right(books);
     } on GrpcError catch (e) {
-      return left(ApiFailure.server(e.codeName));
+      return left(ApiFailure.server(e.code.toString()));
     } catch (e) {
       return left(ApiFailure.server(e.toString()));
     }
@@ -22,7 +22,7 @@ class BookService {
       await client.deleteBook(id);
       return right(Empty());
     } on GrpcError catch (e) {
-      return left(ApiFailure.server(e.codeName));
+      return left(ApiFailure.server(e.code.toString()));
     } catch (e) {
       return left(ApiFailure.server(e.toString()));
     }
@@ -34,7 +34,7 @@ class BookService {
 
       return right(Empty());
     } on GrpcError catch (e) {
-      return left(ApiFailure.server(e.codeName));
+      return left(ApiFailure.server(e.code.toString()));
     } catch (e) {
       return left(ApiFailure.server(e.toString()));
     }
@@ -46,7 +46,7 @@ class BookService {
 
       return right(Empty());
     } on GrpcError catch (e) {
-      return left(ApiFailure.server(e.codeName));
+      return left(ApiFailure.server(e.code.toString()));
     } catch (e) {
       return left(ApiFailure.server(e.toString()));
     }
@@ -56,7 +56,7 @@ class BookService {
     try {
       return right(await client.getBook(bookId));
     } on GrpcError catch (e) {
-      return left(ApiFailure.server(e.codeName));
+      return left(ApiFailure.server(e.code.toString()));
     } catch (e) {
       return left(ApiFailure.server(e.toString()));
     }

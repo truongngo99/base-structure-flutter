@@ -1,5 +1,6 @@
 import 'package:base_structure/core/domain/failure.dart';
 import 'package:base_structure/core/infrastructure/service/book_service.dart';
+import 'package:base_structure/utils/util.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -14,7 +15,7 @@ class BookState with _$BookState {
   const factory BookState.success(
     List<Book> books,
   ) = _Success;
-  const factory BookState.failure(ApiFailure apiFailure) = _Failure;
+  const factory BookState.failure(String apiFailure) = _Failure;
 }
 
 class BookNotifier extends StateNotifier<BookState> {
@@ -26,7 +27,8 @@ class BookNotifier extends StateNotifier<BookState> {
     Either<ApiFailure, Books> failureOrSuccess =
         await _bookService.getAllBook();
     state = failureOrSuccess.fold((l) {
-      return BookState.failure(l);
+      final error = Utils.handleErrorGrpc(l.message!);
+      return BookState.failure(error);
     }, (r) => BookState.success(r.books));
   }
 
@@ -34,7 +36,10 @@ class BookNotifier extends StateNotifier<BookState> {
     Either<ApiFailure, Empty> failureOrSuccess =
         await _bookService.deleteBook(id);
 
-    failureOrSuccess.fold((l) => BookState.failure(l), (r) {
+    failureOrSuccess.fold((l) {
+      final error = Utils.handleErrorGrpc(l.message!);
+      return BookState.failure(error);
+    }, (r) {
       final oldSate = (state as _Success);
       List<Book> listBook = List.from(oldSate.books);
       listBook.removeWhere((book) => book.id == int.parse(id.toString()));
@@ -45,7 +50,10 @@ class BookNotifier extends StateNotifier<BookState> {
   void createBook(Book book) async {
     Either<ApiFailure, Empty> failureOrSuccess =
         await _bookService.createBook(book);
-    failureOrSuccess.fold((l) => BookState.failure(l), (r) {
+    failureOrSuccess.fold((l) {
+      final error = Utils.handleErrorGrpc(l.message!);
+      return BookState.failure(error);
+    }, (r) {
       final oldSate = (state as _Success).books;
       List<Book> list = List.from(oldSate);
       list.add(book);
@@ -58,7 +66,10 @@ class BookNotifier extends StateNotifier<BookState> {
     Either<ApiFailure, Empty> failureOrSuccess =
         await _bookService.editBook(book);
 
-    failureOrSuccess.fold((l) => BookState.failure(l), (r) {
+    failureOrSuccess.fold((l) {
+      final error = Utils.handleErrorGrpc(l.message!);
+      return BookState.failure(error);
+    }, (r) {
       final oldSate = (state as _Success);
       final findBook =
           oldSate.books.firstWhere((element) => element.id == book.id);

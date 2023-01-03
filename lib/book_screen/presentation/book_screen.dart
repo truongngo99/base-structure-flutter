@@ -46,7 +46,7 @@ class _BookScreenState extends ConsumerState<BookScreen> {
                     .toList(),
               ),
           failure: (fail) => Center(
-                child: Text(fail.message ?? ""),
+                child: Text(fail),
               )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

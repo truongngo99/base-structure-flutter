@@ -333,6 +333,8 @@ abstract class _$$_FailureCopyWith<$Res> {
           _$_Failure value, $Res Function(_$_Failure) then) =
       __$$_FailureCopyWithImpl<$Res>;
   $Res call({ApiFailure apiFailure});
+
+  $ApiFailureCopyWith<$Res> get apiFailure;
 }
 
 /// @nodoc
@@ -354,6 +356,13 @@ class __$$_FailureCopyWithImpl<$Res> extends _$BookDetailStateCopyWithImpl<$Res>
           : apiFailure // ignore: cast_nullable_to_non_nullable
               as ApiFailure,
     ));
+  }
+
+  @override
+  $ApiFailureCopyWith<$Res> get apiFailure {
+    return $ApiFailureCopyWith<$Res>(_value.apiFailure, (value) {
+      return _then(_value.copyWith(apiFailure: value));
+    });
   }
 }
 

@@ -20,21 +20,21 @@ mixin _$BookState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<Book> books) success,
-    required TResult Function(ApiFailure apiFailure) failure,
+    required TResult Function(String apiFailure) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<Book> books)? success,
-    TResult Function(ApiFailure apiFailure)? failure,
+    TResult Function(String apiFailure)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<Book> books)? success,
-    TResult Function(ApiFailure apiFailure)? failure,
+    TResult Function(String apiFailure)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -118,7 +118,7 @@ class _$_Initial extends _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<Book> books) success,
-    required TResult Function(ApiFailure apiFailure) failure,
+    required TResult Function(String apiFailure) failure,
   }) {
     return initial();
   }
@@ -128,7 +128,7 @@ class _$_Initial extends _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<Book> books)? success,
-    TResult Function(ApiFailure apiFailure)? failure,
+    TResult Function(String apiFailure)? failure,
   }) {
     return initial?.call();
   }
@@ -138,7 +138,7 @@ class _$_Initial extends _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<Book> books)? success,
-    TResult Function(ApiFailure apiFailure)? failure,
+    TResult Function(String apiFailure)? failure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -258,7 +258,7 @@ class _$_Success extends _Success {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<Book> books) success,
-    required TResult Function(ApiFailure apiFailure) failure,
+    required TResult Function(String apiFailure) failure,
   }) {
     return success(books);
   }
@@ -268,7 +268,7 @@ class _$_Success extends _Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<Book> books)? success,
-    TResult Function(ApiFailure apiFailure)? failure,
+    TResult Function(String apiFailure)? failure,
   }) {
     return success?.call(books);
   }
@@ -278,7 +278,7 @@ class _$_Success extends _Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<Book> books)? success,
-    TResult Function(ApiFailure apiFailure)? failure,
+    TResult Function(String apiFailure)? failure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -337,7 +337,7 @@ abstract class _$$_FailureCopyWith<$Res> {
   factory _$$_FailureCopyWith(
           _$_Failure value, $Res Function(_$_Failure) then) =
       __$$_FailureCopyWithImpl<$Res>;
-  $Res call({ApiFailure apiFailure});
+  $Res call({String apiFailure});
 }
 
 /// @nodoc
@@ -357,7 +357,7 @@ class __$$_FailureCopyWithImpl<$Res> extends _$BookStateCopyWithImpl<$Res>
       apiFailure == freezed
           ? _value.apiFailure
           : apiFailure // ignore: cast_nullable_to_non_nullable
-              as ApiFailure,
+              as String,
     ));
   }
 }
@@ -368,7 +368,7 @@ class _$_Failure extends _Failure {
   const _$_Failure(this.apiFailure) : super._();
 
   @override
-  final ApiFailure apiFailure;
+  final String apiFailure;
 
   @override
   String toString() {
@@ -398,7 +398,7 @@ class _$_Failure extends _Failure {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<Book> books) success,
-    required TResult Function(ApiFailure apiFailure) failure,
+    required TResult Function(String apiFailure) failure,
   }) {
     return failure(apiFailure);
   }
@@ -408,7 +408,7 @@ class _$_Failure extends _Failure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<Book> books)? success,
-    TResult Function(ApiFailure apiFailure)? failure,
+    TResult Function(String apiFailure)? failure,
   }) {
     return failure?.call(apiFailure);
   }
@@ -418,7 +418,7 @@ class _$_Failure extends _Failure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<Book> books)? success,
-    TResult Function(ApiFailure apiFailure)? failure,
+    TResult Function(String apiFailure)? failure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -463,10 +463,10 @@ class _$_Failure extends _Failure {
 }
 
 abstract class _Failure extends BookState {
-  const factory _Failure(final ApiFailure apiFailure) = _$_Failure;
+  const factory _Failure(final String apiFailure) = _$_Failure;
   const _Failure._() : super._();
 
-  ApiFailure get apiFailure;
+  String get apiFailure;
   @JsonKey(ignore: true)
   _$$_FailureCopyWith<_$_Failure> get copyWith =>
       throw _privateConstructorUsedError;
