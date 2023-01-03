@@ -2,8 +2,8 @@ import 'package:base_structure/book_screen/presentation/detail_book.dart';
 import 'package:base_structure/book_screen/shared/provider.dart';
 import 'package:base_structure/gen/generate_proto/lib/proto/book.pb.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'create_book.dart';
 

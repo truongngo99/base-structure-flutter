@@ -5,8 +5,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:base_structure/gen/generate_proto/lib/proto/book.pb.dart';
-
 class BookScreen extends ConsumerStatefulWidget {
   const BookScreen({super.key});
 
@@ -15,8 +13,6 @@ class BookScreen extends ConsumerStatefulWidget {
 }
 
 class _BookScreenState extends ConsumerState<BookScreen> {
-  List<Book> books = [];
-
   @override
   void initState() {
     super.initState();

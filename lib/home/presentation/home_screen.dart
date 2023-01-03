@@ -18,9 +18,11 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
+                key: const Key("btnDetail"),
                 onPressed: () => context.router.push(const DetailRoute()),
-                child: const Text("Go To Detail")),
+                child: const Text(key: Key("gotodetail"), "Go To Detail")),
             ElevatedButton(
+              key: const Key("btnGRPC"),
               onPressed: () => context.router.push(const BookRoute()),
               child: const Text("Go To Demo gRPC"),
             ),

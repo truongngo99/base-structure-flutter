@@ -31,44 +31,72 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  firebase_core: ^2.4.0
+  firebase_auth: ^4.2.1
+  cloud_firestore: ^4.2.0
+  firebase_messaging: ^14.1.4
 
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  auto_route: ^4.0.1
-  logger: ^1.1.0
-  
-  # network
   dio: ^4.0.6
-  json_annotation: ^4.5.0
+  logger: any
+  uni_links: any
+
+  json_annotation: ^4.6.0
+  hooks_riverpod: ^2.1.3
+  flutter_hooks: ^0.18.5+1
+  pull_to_refresh_flutter3: any
+  cached_network_image: any
+  flutter_svg: any
+  flutter_native_splash: any
+  auto_route: ^4.2.1
+  dropdown_button2: ^1.9.2
+  flutter_date_pickers: ^0.4.0
+  flutter_switch: any
+  roundcheckbox: any
+  flutter_reorderable_list: any
+  badges: any
+  readmore: any
+  remove_emoji: any
+
+  awesome_notifications: any
+
+  flutter_secure_storage: any
   freezed_annotation: ^2.2.0
+  intl: any
+  rxdart: any
+  image_picker: any
+  file_picker: any
+  path_provider: any
+  path: any
+  shimmer: any
+  speech_to_text: any
+  permission_handler: any
+  sentry_flutter: any
+  package_info_plus: any
+  dartz: any
+  collection: any
+  shared_preferences: ^2.0.15
+  firebase_dynamic_links: any
+  url_launcher: any
+  image_cropper: ^3.0.1
+  flutter_slidable: ^2.0.0
   grpc: ^3.1.0
   protobuf: ^2.1.0
-  flutter_slidable: ^2.0.0
-  flutter_riverpod: ^2.1.1
-  dartz: ^0.10.1
-
-  # state management
-  hooks_riverpod: ^2.1.1
-  flutter_hooks: ^0.18.5+1
+  archive: ^3.3.0
 
 dev_dependencies:
+  integration_test:
+    sdk: flutter
   flutter_test:
     sdk: flutter
+  flutter_lints: any
   auto_route_generator: ^4.0.0
-  build_runner: ^2.1.11
-  freezed: ^2.1.0+1
-  json_serializable: ^6.2.0
-  flutter_flavorizr: ^2.1.4
-  flutter_gen_runner:
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  build_runner: ^2.2.0
+  flutter_gen_runner: ^5.0.0
+  freezed: ^2.0.4
+  json_serializable: ^6.3.1
+  flutter_flavorizr: ^2.1.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
