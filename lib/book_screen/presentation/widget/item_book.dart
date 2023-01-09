@@ -87,12 +87,12 @@ class ItemBook extends ConsumerWidget {
             ),
             child: Row(
               children: [
-                Image.network(
-                  book.imageUrl,
-                  height: 100,
-                  width: 70,
-                  fit: BoxFit.cover,
-                ),
+                // Image.network(
+                //   book.imageUrl,
+                //   height: 100,
+                //   width: 70,
+                //   fit: BoxFit.cover,
+                // ),
                 const SizedBox(
                   width: 12,
                 ),

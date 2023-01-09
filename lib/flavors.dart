@@ -32,4 +32,15 @@ class F {
         return 'https://reqres.in';
     }
   }
+
+  static String get localhost {
+    switch (appFlavor) {
+      case Flavor.DEV:
+        return '10.10.10.51';
+      case Flavor.PROD:
+        return '10.10.10.51';
+      default:
+        return '10.10.10.51';
+    }
+  }
 }

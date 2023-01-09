@@ -1,6 +1,7 @@
 import 'package:base_structure/book_screen/presentation/widget/create_book.dart';
 import 'package:base_structure/book_screen/presentation/widget/item_book.dart';
 import 'package:base_structure/book_screen/shared/provider.dart';
+import 'package:base_structure/core/infrastructure/logger.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -34,13 +35,16 @@ class _BookScreenState extends ConsumerState<BookScreen> {
                   child: CupertinoActivityIndicator(
                 radius: 20,
               )),
-          success: (books) => ListView(
-                children: books
-                    .map(
-                      (book) => ItemBook(book: book),
-                    )
-                    .toList(),
-              ),
+          success: (books) {
+            logger.d("LENGHT VALUE ${books.length}");
+            return ListView(
+              children: books
+                  .map(
+                    (book) => ItemBook(book: book),
+                  )
+                  .toList(),
+            );
+          },
           failure: (fail) => Center(
                 child: Text(fail),
               )),

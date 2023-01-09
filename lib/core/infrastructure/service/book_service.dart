@@ -1,4 +1,5 @@
 import 'package:base_structure/core/domain/failure.dart';
+import 'package:base_structure/core/infrastructure/logger.dart';
 import 'package:base_structure/gen/generate_proto/lib/proto/book.pbgrpc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:grpc/grpc_or_grpcweb.dart';
@@ -9,6 +10,7 @@ class BookService {
   Future<Either<ApiFailure, Books>> getAllBook() async {
     try {
       final books = await client.getAllBooks(Empty());
+      logger.d("boook service $books");
       return right(books);
     } on GrpcError catch (e) {
       return left(ApiFailure.server(e.code.toString()));
