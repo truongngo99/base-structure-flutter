@@ -17,22 +17,16 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    LoginRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const LoginScreen(),
+      );
+    },
     HomeRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
         child: const HomeScreen(),
-      );
-    },
-    DetailRoute.name: (routeData) {
-      return MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: const DetailScreen(),
-      );
-    },
-    BookRoute.name: (routeData) {
-      return MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: const BookScreen(),
       );
     },
   };
@@ -40,18 +34,26 @@ class _$AppRouter extends RootStackRouter {
   @override
   List<RouteConfig> get routes => [
         RouteConfig(
-          HomeRoute.name,
+          LoginRoute.name,
           path: '/',
         ),
         RouteConfig(
-          DetailRoute.name,
-          path: '/detail',
-        ),
-        RouteConfig(
-          BookRoute.name,
-          path: '/book',
+          HomeRoute.name,
+          path: '/home',
         ),
       ];
+}
+
+/// generated route for
+/// [LoginScreen]
+class LoginRoute extends PageRouteInfo<void> {
+  const LoginRoute()
+      : super(
+          LoginRoute.name,
+          path: '/',
+        );
+
+  static const String name = 'LoginRoute';
 }
 
 /// generated route for
@@ -60,32 +62,8 @@ class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute()
       : super(
           HomeRoute.name,
-          path: '/',
+          path: '/home',
         );
 
   static const String name = 'HomeRoute';
-}
-
-/// generated route for
-/// [DetailScreen]
-class DetailRoute extends PageRouteInfo<void> {
-  const DetailRoute()
-      : super(
-          DetailRoute.name,
-          path: '/detail',
-        );
-
-  static const String name = 'DetailRoute';
-}
-
-/// generated route for
-/// [BookScreen]
-class BookRoute extends PageRouteInfo<void> {
-  const BookRoute()
-      : super(
-          BookRoute.name,
-          path: '/book',
-        );
-
-  static const String name = 'BookRoute';
 }
