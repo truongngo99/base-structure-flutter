@@ -118,13 +118,13 @@ flutter_gen:
     # Optional
     # Set to true if you want this package to be a package dependency
     # See: https://flutter.dev/docs/development/ui/assets-and-images#from-packages
-    package_parameter_enabled: false
+    package_parameter_enabled: true
     # Optional
     # Avaliable values:
     # - camel-case
     # - snake-case
     # - dot-delimiter
-    style: dot-delimiter
+    style: camel-case
 
   fonts:
     # Optional

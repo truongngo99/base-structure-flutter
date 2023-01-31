@@ -9,4 +9,5 @@
     <color name="pinkPrimary" type="material">#D02F82</color>
     <color name="robinEggBluePrimary">#0095C2</color>
     <color name="blueBerryPrimary" type="material">#537CED</color>
+    <color name="background" type="material">#FAFAFA</color>
 </resources>

@@ -49,11 +49,21 @@ class $AssetsImagesPNGGen {
 class $AssetsImagesSVGGen {
   const $AssetsImagesSVGGen();
 
+  /// File path: assets/images/SVG/ic_fish.svg
+  SvgGenImage get icFish => const SvgGenImage('assets/images/SVG/ic_fish.svg');
+
+  /// File path: assets/images/SVG/ic_fish_dash.svg
+  SvgGenImage get icFishDash =>
+      const SvgGenImage('assets/images/SVG/ic_fish_dash.svg');
+
+  /// File path: assets/images/SVG/ic_ship.svg
+  SvgGenImage get icShip => const SvgGenImage('assets/images/SVG/ic_ship.svg');
+
   /// File path: assets/images/SVG/success.svg
   SvgGenImage get success => const SvgGenImage('assets/images/SVG/success.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [success];
+  List<SvgGenImage> get values => [icFish, icFishDash, icShip, success];
 }
 
 class Assets {

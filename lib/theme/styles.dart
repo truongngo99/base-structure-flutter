@@ -22,12 +22,12 @@ import 'package:flutter/material.dart';
 //   fontWeight: FontWeight.w700,
 // );
 
-// const headline4 = TextStyle(
-//   color: colorBlack84,
-//   fontSize: 20,
-//   height: 1.5,
-//   fontWeight: FontWeight.w700,
-// );
+const headline4 = TextStyle(
+  color: Colors.black,
+  fontSize: 18,
+  height: 44 / 18,
+  fontWeight: FontWeight.w800,
+);
 
 const bodyText1 = TextStyle(
   color: ColorName.blueBerryPrimary,

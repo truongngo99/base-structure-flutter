@@ -14,6 +14,33 @@ class ColorName {
   ColorName._();
 
   /// MaterialColor:
+  ///   50: #FFFEFEFE
+  ///   100: #FFFEFEFE
+  ///   200: #FFFDFDFD
+  ///   300: #FFFCFCFC
+  ///   400: #FFFBFBFB
+  ///   500: #FFFAFAFA
+  ///   600: #FFF9F9F9
+  ///   700: #FFF9F9F9
+  ///   800: #FFF8F8F8
+  ///   900: #FFF6F6F6
+  static const MaterialColor background = MaterialColor(
+    0xFFFAFAFA,
+    <int, Color>{
+      50: Color(0xFFFEFEFE),
+      100: Color(0xFFFEFEFE),
+      200: Color(0xFFFDFDFD),
+      300: Color(0xFFFCFCFC),
+      400: Color(0xFFFBFBFB),
+      500: Color(0xFFFAFAFA),
+      600: Color(0xFFF9F9F9),
+      700: Color(0xFFF9F9F9),
+      800: Color(0xFFF8F8F8),
+      900: Color(0xFFF6F6F6),
+    },
+  );
+
+  /// MaterialColor:
   ///   50: #FFE0F5F5
   ///   100: #FFB3E5E6
   ///   200: #FF80D4D5
