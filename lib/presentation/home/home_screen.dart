@@ -1,3 +1,4 @@
+import 'package:base_structure/gen/colors.gen.dart';
 import 'package:base_structure/presentation/home/widgets/custom_header.dart';
 import 'package:base_structure/presentation/home/widgets/item_home.dart';
 import 'package:flutter/material.dart';
@@ -8,13 +9,18 @@ class HomeScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
+    final textTheme = theme.textTheme;
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      // backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         toolbarHeight: 84,
         backgroundColor: Colors.white,
+        surfaceTintColor: Colors.transparent,
         // title: const CustomHeader(),
-        flexibleSpace: const Center(child: CustomHeader()),
+        flexibleSpace: const Center(
+          child: CustomHeader(),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 32, right: 46.86),
@@ -24,30 +30,23 @@ class HomeScreen extends ConsumerWidget {
             const SizedBox(
               height: 18,
             ),
-            const Text(
-              "恵比寿丸",
-              style: TextStyle(
-                  color: Color(0xFF2D3748),
-                  fontSize: 22,
-                  fontWeight: FontWeight.w700,
-                  height: 36 / 22),
+            Text("恵比寿丸", style: textTheme.bodyMedium),
+            const Padding(
+              padding: EdgeInsets.only(top: 7, bottom: 16),
+              child: Divider(
+                color: ColorName.blueDevice,
+                thickness: 3,
+              ),
             ),
-            Container(
-              color: const Color(0xFF01A7D9),
-              margin: const EdgeInsets.only(top: 7, bottom: 16),
-              height: 3,
+            const ItemHomeWidget(
+              enable: false,
             ),
-            const ItemHomeWidget(),
-            const ItemHomeWidget(),
-            const ItemHomeWidget(),
-            // ListView.builder(
-            //   shrinkWrap: true,
-            //   physics: const FixedExtentScrollPhysics(),
-            //   itemCount: 3,
-            //   itemBuilder: (context, index) {
-            //     return const ItemHomeWidget();
-            //   },
-            // )
+            const ItemHomeWidget(
+              enable: true,
+            ),
+            const ItemHomeWidget(
+              enable: true,
+            ),
           ],
         ),
       ),

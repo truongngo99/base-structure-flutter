@@ -1,10 +1,12 @@
 import 'package:base_structure/gen/assets.gen.dart';
+import 'package:base_structure/gen/colors.gen.dart';
 import 'package:base_structure/presentation/home/widgets/item_ship.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class ItemHomeWidget extends ConsumerStatefulWidget {
-  const ItemHomeWidget({super.key});
+  final bool enable;
+  const ItemHomeWidget({super.key, required this.enable});
 
   @override
   ConsumerState<ConsumerStatefulWidget> createState() => _ItemHomeWidgetState();
@@ -13,6 +15,7 @@ class ItemHomeWidget extends ConsumerStatefulWidget {
 class _ItemHomeWidgetState extends ConsumerState<ItemHomeWidget> {
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
       margin: const EdgeInsets.only(bottom: 12),
@@ -31,59 +34,65 @@ class _ItemHomeWidgetState extends ConsumerState<ItemHomeWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(
-                        color: const Color(0xFF01A7D9),
+                        color: widget.enable
+                            ? ColorName.greyPrimary
+                            : ColorName.bluePrimary,
                         width: 1,
                       ),
                     ),
-                    child: const Text(
+                    child: Text(
                       "操業",
-                      style: TextStyle(
-                          color: Color(0xFF01A7D9),
-                          fontSize: 13,
-                          height: 16 / 13,
-                          fontWeight: FontWeight.w600),
+                      style: textTheme.titleSmall?.copyWith(
+                        color: widget.enable
+                            ? ColorName.greyPrimary
+                            : ColorName.bluePrimary,
+                      ),
                     ),
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    children: const [
-                      Text(
-                        "06:00",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 48,
+                    children: [
+                      Text("06:00",
+                          style: textTheme.headlineLarge?.copyWith(
                             height: 1,
-                            fontWeight: FontWeight.w400),
-                      ),
-                      SizedBox(
+                            fontWeight: FontWeight.w500,
+                            color: widget.enable
+                                ? ColorName.greyPrimary
+                                : ColorName.blackPrimary,
+                          )),
+                      const SizedBox(
                         width: 6,
                       ),
-                      Text(
-                        "の記録",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
+                      Text("の記録",
+                          style: textTheme.headlineSmall?.copyWith(
+                            fontWeight: FontWeight.w700,
                             height: 1,
-                            fontWeight: FontWeight.w700),
-                      ),
-                      SizedBox(
+                            color: widget.enable
+                                ? ColorName.greyPrimary
+                                : ColorName.blackPrimary,
+                          )),
+                      const SizedBox(
                         width: 6,
                       ),
-                      Icon(
-                        Icons.check,
-                        color: Color(0xFF01A7D9),
-                        size: 24,
-                        weight: 22,
-                      )
+                      widget.enable
+                          ? const SizedBox.shrink()
+                          : const Icon(
+                              Icons.check,
+                              color: ColorName.bluePrimary,
+                              size: 24,
+                              weight: 22,
+                            )
                     ],
                   ),
                 ],
@@ -94,7 +103,7 @@ class _ItemHomeWidgetState extends ConsumerState<ItemHomeWidget> {
                 height: 73,
                 padding: const EdgeInsets.all(16),
                 decoration: const BoxDecoration(
-                    shape: BoxShape.circle, color: Color(0xFFF7F7F7)),
+                    shape: BoxShape.circle, color: ColorName.greySecondary),
                 child: Assets.images.svg.icShip.svg(),
               ),
               const SizedBox(
@@ -108,7 +117,7 @@ class _ItemHomeWidgetState extends ConsumerState<ItemHomeWidget> {
                     padding: const EdgeInsets.all(16),
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Color(0xFFF7F7F7),
+                      color: ColorName.greySecondary,
                     ),
                     child:
                         Assets.images.svg.icFishDash.svg(width: 10, height: 10),
@@ -119,7 +128,7 @@ class _ItemHomeWidgetState extends ConsumerState<ItemHomeWidget> {
                     child: Icon(
                       Icons.add_circle,
                       size: 18,
-                      color: Color(0xFF01A7D9),
+                      color: ColorName.bluePrimary,
                     ),
                   ),
                 ],
@@ -129,22 +138,22 @@ class _ItemHomeWidgetState extends ConsumerState<ItemHomeWidget> {
           const SizedBox(
             height: 14,
           ),
-          const Text(
+          Text(
             "35°27.15N 139°22.55E / 899-345 ・はれ・きた6m/s・水温5℃・気温1℃・1020hPa",
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w700,
-              height: 23 / 16,
-              color: Color(0xFF718096),
-            ),
+            style: textTheme.bodyMedium?.copyWith(
+                color: widget.enable
+                    ? ColorName.greyPrimary
+                    : ColorName.blackSecondary),
           ),
-          Container(
-            margin: const EdgeInsets.only(
-              top: 14,
-              bottom: 14,
-            ),
+          const SizedBox(
+            height: 14,
+          ),
+          const Divider(
             height: 1,
-            color: const Color(0xFFCBD5E0),
+            color: ColorName.greyDevice,
+          ),
+          const SizedBox(
+            height: 14,
           ),
           SizedBox(
             height: 40,
@@ -155,7 +164,7 @@ class _ItemHomeWidgetState extends ConsumerState<ItemHomeWidget> {
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return const ItemShipWidget();
+                return ItemShipWidget(enable: widget.enable);
               },
             ),
           )

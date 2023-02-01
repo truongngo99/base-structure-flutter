@@ -1,3 +1,4 @@
+import 'package:base_structure/gen/colors.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -10,38 +11,58 @@ class CustomHeader extends ConsumerWidget {
     return Container(
       // color: Colors.white,
       // height: 84,
-      padding: const EdgeInsets.only(right: 45.29),
+      padding: const EdgeInsets.only(right: 45.29, left: 32),
       // alignment: Alignment.centerLeft,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          IconButton(
-            padding: const EdgeInsets.all(0),
-            onPressed: () {},
-            icon: const Icon(
-              Icons.arrow_back_ios,
-              size: 12,
-              color: Color(0xFF707070),
+          const Icon(
+            Icons.arrow_back_ios,
+            size: 16,
+            color: Color(0xFF707070),
+          ),
+          const SizedBox(
+            width: 18,
+          ),
+          const Icon(
+            Icons.arrow_forward_ios,
+            color: Color(0xFF707070),
+            size: 16,
+          ),
+          const SizedBox(
+            width: 21,
+          ),
+          RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: '2022/06/12',
+                  style: textTheme.headlineLarge?.copyWith(
+                    fontSize: 36,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                TextSpan(
+                  text: ' (日)',
+                  style: textTheme.headlineSmall
+                      ?.copyWith(fontWeight: FontWeight.w500),
+                ),
+              ],
             ),
           ),
-          IconButton(
-            padding: const EdgeInsets.all(0),
-            onPressed: () {},
-            icon: const Icon(
-              Icons.arrow_forward_ios,
-              color: Color(0xFF707070),
-              size: 12,
+          const SizedBox(
+            width: 15,
+          ),
+          const Padding(
+            padding: EdgeInsets.only(top: 20),
+            child: Icon(
+              Icons.keyboard_arrow_down,
+              size: 18,
             ),
           ),
-          const Text(
-            "2022/06/12 (日)",
-            style: TextStyle(
-                fontSize: 18,
-                height: 44 / 18,
-                fontWeight: FontWeight.w800,
-                color: Colors.black),
+          const SizedBox(
+            width: 16,
           ),
-          const Icon(Icons.keyboard_arrow_down),
           Text(
             "の記録",
             style: TextStyle(
@@ -54,7 +75,8 @@ class CustomHeader extends ConsumerWidget {
             margin: const EdgeInsets.only(left: 24),
             padding: const EdgeInsets.symmetric(horizontal: 34, vertical: 6),
             decoration: BoxDecoration(
-                border: Border.all(width: 1, color: Colors.grey.shade400),
+                border: Border.all(
+                    width: 1, color: const Color.fromRGBO(0, 0, 0, 0.1)),
                 borderRadius: BorderRadius.circular(5)),
             child: const Text(
               "今日",
@@ -69,7 +91,8 @@ class CustomHeader extends ConsumerWidget {
             margin: const EdgeInsets.only(left: 24),
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
             decoration: BoxDecoration(
-              border: Border.all(width: 1, color: Colors.grey.shade400),
+              border: Border.all(
+                  width: 1, color: const Color.fromRGBO(0, 0, 0, 0.1)),
               borderRadius: BorderRadius.circular(50),
             ),
             child: Row(

@@ -1,13 +1,12 @@
 <resources>
-    <color name="redPrimary">#DB2B17</color>
-    <color name="orangePrimary">#E88809</color>
-    <color name="yellowPrimary">#F5BF09</color>
-    <color name="greenPrimary">#3FAD1C</color>
-    <color name="blueAccentPrimary" type="material">#00A8AB</color>
-    <color name="bluePrimary" type="material">#0095C2</color>
-    <color name="purplePrimary" type="material">#955ACC</color>
-    <color name="pinkPrimary" type="material">#D02F82</color>
-    <color name="robinEggBluePrimary">#0095C2</color>
-    <color name="blueBerryPrimary" type="material">#537CED</color>
     <color name="background" type="material">#FAFAFA</color>
+    <color name="bluePrimary" type="material">#01A7D9</color>
+    <color name="blueDevice" type="material">#01A7D9</color>
+    <color name="greyDevice" type="material">#CBD5E0</color>
+    <color name="blackPrimary" type="material">#1A202C</color>
+    <color name="blackSecondary" type="material">#718096</color>
+    <color name="greyPrimary" type="material">#9EA8B7</color>
+    <color name="greySecondary" type="material">#F7F7F7</color>
+    <color name="redPrimary" type="material">#FF6969</color>
+    <color name="blueSecondary" type="material">#E9F7FF</color>
 </resources>
