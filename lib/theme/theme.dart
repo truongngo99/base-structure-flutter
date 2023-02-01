@@ -7,6 +7,11 @@ ThemeData lightTheme = ThemeData(
   colorScheme: lightColorScheme,
   useMaterial3: true,
   appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
+  dialogTheme: const DialogTheme(
+    backgroundColor: Colors.black,
+    titleTextStyle: TextStyle(color: Colors.amber),
+    iconColor: Colors.amber,
+  ),
   textTheme: const TextTheme(
       headlineLarge: headlineLarge,
       headlineSmall: headLineSmall,

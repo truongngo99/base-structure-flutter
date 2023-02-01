@@ -1,6 +1,6 @@
-import 'package:base_structure/gen/colors.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class CustomHeader extends ConsumerWidget {
   const CustomHeader({super.key});
@@ -9,8 +9,6 @@ class CustomHeader extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final textTheme = Theme.of(context).textTheme;
     return Container(
-      // color: Colors.white,
-      // height: 84,
       padding: const EdgeInsets.only(right: 45.29, left: 32),
       // alignment: Alignment.centerLeft,
       child: Row(
@@ -53,11 +51,21 @@ class CustomHeader extends ConsumerWidget {
           const SizedBox(
             width: 15,
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 20),
-            child: Icon(
-              Icons.keyboard_arrow_down,
-              size: 18,
+          Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: InkWell(
+              onTap: () {
+                openDatePicker(
+                  context,
+                  DateTime.now(),
+                  DateTime(1970, 1, 1),
+                  DateTime(2030, 1, 1),
+                );
+              },
+              child: const Icon(
+                Icons.keyboard_arrow_down,
+                size: 18,
+              ),
             ),
           ),
           const SizedBox(
@@ -159,6 +167,26 @@ class CustomHeader extends ConsumerWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  openDatePicker(BuildContext context, DateTime initialDate, DateTime firstDate,
+      DateTime lastDate) {
+    return showDialog(
+      context: context,
+      builder: (context) => Dialog(
+        child: SfDateRangePicker(
+          headerStyle: const DateRangePickerHeaderStyle(
+            textAlign: TextAlign.center,
+            textStyle: TextStyle(
+                color: Colors.blue, fontSize: 18, fontWeight: FontWeight.w400),
+          ),
+          selectionMode: DateRangePickerSelectionMode.range,
+          initialSelectedRange: PickerDateRange(
+              DateTime.now().subtract(const Duration(days: 4)),
+              DateTime.now().add(const Duration(days: 3))),
+        ),
       ),
     );
   }
