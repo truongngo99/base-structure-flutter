@@ -176,18 +176,18 @@ class ColorName {
   );
 
   /// MaterialColor:
-  ///   50: #FFF9FAFB
-  ///   100: #FFEFF2F6
-  ///   200: #FFE5EAF0
-  ///   300: #FFDBE2E9
-  ///   400: #FFD3DBE5
-  ///   500: #FFCBD5E0
-  ///   600: #FFC6D0DC
-  ///   700: #FFBECAD8
-  ///   800: #FFB8C4D3
-  ///   900: #FFACBACB
-  static const MaterialColor greyDevice = MaterialColor(
-    0xFFCBD5E0,
+  ///   50: #FFFFEDED
+  ///   100: #FFFFD2D2
+  ///   200: #FFFFB4B4
+  ///   300: #FFFF9696
+  ///   400: #FFFF8080
+  ///   500: #FFFF6969
+  ///   600: #FFFF6161
+  ///   700: #FFFF5656
+  ///   800: #FFFF4C4C
+  ///   900: #FFFF3B3B
+  static const MaterialColor redPrimary = MaterialColor(
+    0xFFFF6969,
     <int, Color>{
       50: Color(0xFFF9FAFB),
       100: Color(0xFFEFF2F6),
@@ -203,18 +203,18 @@ class ColorName {
   );
 
   /// MaterialColor:
-  ///   50: #FFF3F5F6
-  ///   100: #FFE2E5E9
-  ///   200: #FFCFD4DB
-  ///   300: #FFBBC2CD
-  ///   400: #FFADB5C2
-  ///   500: #FF9EA8B7
-  ///   600: #FF96A0B0
-  ///   700: #FF8C97A7
-  ///   800: #FF828D9F
-  ///   900: #FF707D90
-  static const MaterialColor greyPrimary = MaterialColor(
-    0xFF9EA8B7,
+  ///   50: #FFFFFFFF
+  ///   100: #FFFFFFFF
+  ///   200: #FFFFFFFF
+  ///   300: #FFFFFFFF
+  ///   400: #FFFFFFFF
+  ///   500: #FFFFFFFF
+  ///   600: #FFFFFFFF
+  ///   700: #FFFFFFFF
+  ///   800: #FFFFFFFF
+  ///   900: #FFFFFFFF
+  static const MaterialColor white = MaterialColor(
+    0xFFFFFFFF,
     <int, Color>{
       50: Color(0xFFF3F5F6),
       100: Color(0xFFE2E5E9),

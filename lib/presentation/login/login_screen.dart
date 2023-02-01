@@ -6,6 +6,10 @@ class LoginScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return const Scaffold();
+    return Scaffold(
+      body: Container(
+        color: Colors.amber,
+      ),
+    );
   }
 }

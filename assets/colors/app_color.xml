@@ -9,4 +9,6 @@
     <color name="greySecondary" type="material">#F7F7F7</color>
     <color name="redPrimary" type="material">#FF6969</color>
     <color name="blueSecondary" type="material">#E9F7FF</color>
+    <color name="greyTertiary" type="material">#BCBCBC</color>
+    <color name="white" type="material">#FFFFFF</color>
 </resources>
