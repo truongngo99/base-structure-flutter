@@ -8,8 +8,8 @@ part 'app_route.gr.dart';
 @MaterialAutoRouter(
   replaceInRouteName: 'Screen,Route',
   routes: <AutoRoute>[
-    AutoRoute(page: LoginScreen, initial: false, path: "/login"),
-    AutoRoute(page: HomeScreen, initial: true)
+    AutoRoute(page: LoginScreen, initial: true, path: "/login"),
+    AutoRoute(page: HomeScreen, initial: false)
   ],
 )
 class AppRouter extends _$AppRouter {

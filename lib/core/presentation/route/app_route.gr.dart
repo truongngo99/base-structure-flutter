@@ -34,12 +34,18 @@ class _$AppRouter extends RootStackRouter {
   @override
   List<RouteConfig> get routes => [
         RouteConfig(
+          '/#redirect',
+          path: '/',
+          redirectTo: '/login',
+          fullMatch: true,
+        ),
+        RouteConfig(
           LoginRoute.name,
           path: '/login',
         ),
         RouteConfig(
           HomeRoute.name,
-          path: '/',
+          path: '/home-screen',
         ),
       ];
 }
@@ -62,7 +68,7 @@ class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute()
       : super(
           HomeRoute.name,
-          path: '/',
+          path: '/home-screen',
         );
 
   static const String name = 'HomeRoute';
