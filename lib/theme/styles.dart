@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 
 const headlineLarge = TextStyle(
   color: ColorName.blackPrimary,
-  fontSize: 48,
+  fontSize: 34,
   fontWeight: FontWeight.w800,
 );
 
 const headLineSmall = TextStyle(
   color: ColorName.blackPrimary,
-  fontSize: 18,
+  fontSize: 16,
   fontWeight: FontWeight.w800,
 );
 
@@ -39,6 +39,6 @@ const bodySmall = TextStyle(
 
 const titleSmall = TextStyle(
   color: ColorName.bluePrimary,
-  fontSize: 13,
+  fontSize: 16,
   fontWeight: FontWeight.w600,
 );

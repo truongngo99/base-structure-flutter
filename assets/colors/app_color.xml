@@ -11,4 +11,5 @@
     <color name="blueSecondary" type="material">#E9F7FF</color>
     <color name="greyTertiary" type="material">#BCBCBC</color>
     <color name="white" type="material">#FFFFFF</color>
+    <color name="blueLabel" type="material">#4A5568</color>
 </resources>

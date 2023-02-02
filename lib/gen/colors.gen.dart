@@ -122,6 +122,33 @@ class ColorName {
   );
 
   /// MaterialColor:
+  ///   50: #FFE9EBED
+  ///   100: #FFC9CCD2
+  ///   200: #FFA5AAB4
+  ///   300: #FF808895
+  ///   400: #FF656F7F
+  ///   500: #FF4A5568
+  ///   600: #FF434E60
+  ///   700: #FF3A4455
+  ///   800: #FF323B4B
+  ///   900: #FF222A3A
+  static const MaterialColor blueLabel = MaterialColor(
+    0xFF4A5568,
+    <int, Color>{
+      50: Color(0xFFE9EBED),
+      100: Color(0xFFC9CCD2),
+      200: Color(0xFFA5AAB4),
+      300: Color(0xFF808895),
+      400: Color(0xFF656F7F),
+      500: Color(0xFF4A5568),
+      600: Color(0xFF434E60),
+      700: Color(0xFF3A4455),
+      800: Color(0xFF323B4B),
+      900: Color(0xFF222A3A),
+    },
+  );
+
+  /// MaterialColor:
   ///   50: #FFE1F4FA
   ///   100: #FFB3E5F4
   ///   200: #FF80D3EC

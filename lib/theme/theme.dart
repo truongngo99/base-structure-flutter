@@ -1,4 +1,3 @@
-import 'package:base_structure/gen/fonts.gen.dart';
 import 'package:base_structure/theme/color_schemes.dart';
 import 'package:base_structure/theme/styles.dart';
 import 'package:flutter/material.dart';
